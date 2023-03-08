@@ -1,0 +1,79 @@
+<!--<section class="property-binding">
+    <article>
+        <h3>
+            projeto angular é dificil
+        </h3>
+        <p>Interpolado: {{ url }}</p>
+        <p>Meu numero divido por 2: {{ getValor() }}</p>
+    </article>
+    <article>
+        <img src="{{ urlImage }}" alt="">
+        <img [src]="urlImage" alt="">
+    </article>
+    <article>
+        <h3>class and style binding</h3>
+        <div>
+            selecione uma:
+            <select #classe (change) = '0'>
+                <option value="red">sucesso</option>
+                <option value="black">falha</option>
+            </select>
+            <br><br>
+            <div class="container" 
+            [class.red]="classe.value == 'red' ">sucesso</div>
+            <div class="container" 
+            class="{{ classe.value }}">falha</div>
+        </div>
+
+    </article>
+</section> !-->
+<!--<section>
+    <article>
+        <h3>event binding</h3>
+        <div>
+            <button (click) = "botao()"
+            class="btn btn-primary">Clique aqui
+            </button>
+        </div>
+        <br><br>
+
+        <input 
+        #campoInput 
+        type="text"
+        (keyup) = "keyUp($event)"
+        (keyup.enter) = "salvarValor(campoInput.value)"
+        (blur) = "salvarValor(campoInput.value)">
+        <br>
+        <p>valor atual: {{ valorAtual }}</p>
+        <p>valor atual: {{ valorSalvo }}</p>
+        <br>
+        <span
+        (mouseover) = "onMouserOverOut()"
+        (mouseout) = "onMouserOverOut()"
+        [class.highligth]="isMouseOver">
+            passe aqui
+        </span>
+    </article>
+</section>
+<section>
+    <h3>two way data binding</h3>
+    <div>
+        <input #valorInput 
+        type="text"
+        [value]='nome'
+        (input)="nome = valorInput.value">
+        <input #valorInput 
+        type="text"
+        [value]='nome'
+        [(ngModel)]="nome">
+        <p>valor digitado: {{ nome }}</p>
+        <br><br>
+    </div>
+    <app-meu-form></app-meu-form>
+</section> -->
+<section>
+    <h1>Input/Output properties</h1>
+    <app-curso [nome]="nomeDoCurso" ></app-curso>
+    <contador [valor]="valorIncial" 
+    (mudouValor)="onMudouValor($event)"></contador>
+</section>
